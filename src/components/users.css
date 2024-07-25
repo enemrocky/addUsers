@@ -1,0 +1,15 @@
+.container {
+	background-color: rgb(206, 206, 206);
+	border-radius: 1rem;
+	box-shadow: rgb(70, 70, 70) 3px 3px 6px;
+	margin: 2rem auto;
+	padding: 2rem;
+	width: 40vw;
+}
+
+.user-field {
+	border: solid rgb(144, 143, 143) 1px;
+	padding: 0.7rem 1.5rem;
+	margin-bottom: 0.6rem;
+	list-style: none;
+}
