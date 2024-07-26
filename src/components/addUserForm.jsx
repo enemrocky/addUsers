@@ -7,12 +7,18 @@ const AddUserForm = (props) => {
 
 	const submitHandler = (event) => {
 		event.preventDefault();
+
+		if (userName.trim().length === 0 || userAge.trim().length === 0) return;
+
+		if (+userAge < 1) return;
+
 		setUserName("");
 		setUserAge("");
 
 		const userData = {
 			name: userName,
 			age: userAge,
+			id: Math.random(),
 		};
 
 		props.onSaveData(userData);
@@ -42,7 +48,6 @@ const AddUserForm = (props) => {
 					type="number"
 					onChange={userAgeHandler}
 					value={userAge}
-					min={13}
 				/>
 			</div>
 			<button type="submit">Add User</button>
