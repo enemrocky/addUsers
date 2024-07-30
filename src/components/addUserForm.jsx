@@ -8,9 +8,10 @@ const AddUserForm = (props) => {
 	const submitHandler = (event) => {
 		event.preventDefault();
 
-		if (userName.trim().length === 0 || userAge.trim().length === 0) return;
+		if (userName.trim().length === 0 || userAge.trim().length === 0)
+			return console.log("Enter a valid name");
 
-		if (+userAge < 1) return;
+		if (+userAge < 1) return console.log("Enter a valid age");
 
 		setUserName("");
 		setUserAge("");
