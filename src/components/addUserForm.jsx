@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ErrorModal from "./ErrorModal";
 import "./addUserForm.css";
 
 const AddUserForm = (props) => {
@@ -32,27 +33,31 @@ const AddUserForm = (props) => {
 	};
 
 	return (
-		<form onSubmit={submitHandler} className="add-user-form">
-			<div className="form-group">
-				<label htmlFor="name">Username</label>
-				<input
-					id="username"
-					type="text"
-					onChange={userNameHandler}
-					value={userName}
-				/>
-			</div>
-			<div className="form-group">
-				<label htmlFor="age">Age (Years)</label>
-				<input
-					id="age"
-					type="number"
-					onChange={userAgeHandler}
-					value={userAge}
-				/>
-			</div>
-			<button type="submit">Add User</button>
-		</form>
+		<>
+			<ErrorModal />
+
+			<form onSubmit={submitHandler} className="add-user-form">
+				<div className="form-group">
+					<label htmlFor="name">Username</label>
+					<input
+						id="username"
+						type="text"
+						onChange={userNameHandler}
+						value={userName}
+					/>
+				</div>
+				<div className="form-group">
+					<label htmlFor="age">Age (Years)</label>
+					<input
+						id="age"
+						type="number"
+						onChange={userAgeHandler}
+						value={userAge}
+					/>
+				</div>
+				<button type="submit">Add User</button>
+			</form>
+		</>
 	);
 };
 

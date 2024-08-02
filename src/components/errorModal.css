@@ -1,0 +1,35 @@
+.error-modal {
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	width: 25vw;
+	margin: auto;
+	border-radius: 1rem;
+	box-shadow: rgb(70, 70, 70) 3px 3px 6px;
+	z-index: -1;
+	overlay: auto black;
+}
+
+.error-modal .header {
+	background-color: #165704;
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+	color: #fff;
+}
+.header h2 {
+	margin-left: 1rem;
+}
+
+.content {
+	margin-left: 1rem;
+	margin-bottom: 3rem;
+}
+
+.error-modal button {
+	background-color: #165704;
+	padding: 0.5rem 1rem;
+	font-size: 18px;
+	border: none;
+	color: #fff;
+	margin-left: 1rem;
+}
