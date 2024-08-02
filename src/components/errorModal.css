@@ -7,7 +7,6 @@
 	border-radius: 1rem;
 	box-shadow: rgb(70, 70, 70) 3px 3px 6px;
 	z-index: -1;
-	overlay: auto black;
 }
 
 .error-modal .header {
